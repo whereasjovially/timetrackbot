@@ -6,6 +6,7 @@ Created on 16 Sep 2019
 
 from bot.application import Application as BotApp
 from flask import Flask, request
+
 app = Flask(__name__)
 app.debug = True
 bot_app = BotApp()

@@ -27,7 +27,3 @@ def webhook_messages():
     if request.method == 'POST':
         return bot_app.process_webhook(request.json)
     return("Running WebEx Bot!")
-    
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port="5001")

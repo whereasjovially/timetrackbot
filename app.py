@@ -27,3 +27,7 @@ def webhook_messages():
     if request.method == 'POST':
         return bot_app.process_webhook(request.json)
     return("Running WebEx Bot!")
+
+@app.route("/")
+def default_page():
+        return "<h1>Nothing to see here!</h1>"

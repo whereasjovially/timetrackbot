@@ -42,7 +42,7 @@ class HelpTaskCommand(Command):
             cmds_string = ", ".join(cmd_obj.get_identifier())
             
             if cmds_string not in used_commands:
-                output+=(f"Commands: `{cmds_string}`  \n\n")
+                output+=(f"\n\nCommands: `{cmds_string}`  \n\n")
                 output+=(f"{cmd_obj.get_description()}\n\n")
                 used_commands.append(cmds_string)
         

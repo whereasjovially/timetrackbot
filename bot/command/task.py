@@ -15,7 +15,7 @@ class TaskCommand(Command):
 
     @staticmethod
     def get_identifier() -> list:
-        return ['task', 'nt']
+        return ['task', 't']
 
     @staticmethod
     def get_description() -> str:

@@ -13,7 +13,7 @@ class SummaryTaskCommand(Command):
 
     @staticmethod
     def get_identifier() -> list:
-        return ['summary']
+        return ['summary', 'sum']
 
     @staticmethod
     def get_description() -> str:

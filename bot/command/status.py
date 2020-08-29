@@ -13,7 +13,7 @@ class StatusCommand(Command):
 
     @staticmethod
     def get_identifier() -> list:
-        return ['sh status', 'show status']
+        return ['status', 'stat']
 
     @staticmethod
     def get_description() -> str:

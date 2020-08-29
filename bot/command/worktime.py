@@ -15,7 +15,7 @@ class WorktimeCommand(Command):
 
     @staticmethod
     def get_identifier() -> list:
-        return ['start', 'st']
+        return ['worktime', 'wt']
 
     @staticmethod
     def get_description() -> str:

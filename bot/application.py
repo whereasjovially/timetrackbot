@@ -84,6 +84,9 @@ class Application(object):
         config = yaml.load(open('meta/environment.yml'), Loader=yaml.BaseLoader)
 
         # Overwrite config settings by os.environment
+
+        print(os.environ)
+
         if 'TARGET_URL' in os.environ:
             config['TARGET_URL'] = os.environ['TARGET_URL']
         if 'BOT_AUTH_TOKEN' in os.environ:

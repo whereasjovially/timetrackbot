@@ -83,12 +83,9 @@ class Application(object):
         # To-Do: File Exists and is YML
         config = yaml.load(open('meta/environment.yml'), Loader=yaml.BaseLoader)
 
+        print(config)
+
         # Overwrite config settings by os.environment
-
-        print(os.environ)
-        print('TARGET_URL' in os.environ)
-        print(os.environ['TARGET_URL'])
-
         if 'TARGET_URL' in os.environ:
             config['TARGET_URL'] = os.environ['TARGET_URL']
         if 'BOT_AUTH_TOKEN' in os.environ:
@@ -97,6 +94,8 @@ class Application(object):
             config['BOT_ID'] = os.environ['BOT_ID']
         if 'BOT_USERNAME' in os.environ:
             config['BOT_USERNAME'] = os.environ['BOT_USERNAME']
+
+        print(config)
 
         return config
 

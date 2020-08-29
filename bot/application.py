@@ -119,8 +119,8 @@ class Application(object):
         self.message_trigger = True
 
         # Authorization check
-        if message.personEmail not in self.config['AUTHORIZED_USERS']:
-            result = (f"Hi {person.displayName}, you are not authorized using this application!")
+        if message.personEmail.lower() not in self.config['AUTHORIZED_USERS']:
+            result = (f"Hi {person.displayName} ({message.personEmail}), you are not authorized using this application!")
         else:
             result = self.process_message(message)
             time.sleep(2)

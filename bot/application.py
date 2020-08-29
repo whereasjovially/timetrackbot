@@ -6,7 +6,7 @@ Created on 17 Sep 2019
 
 import os
 from bot.command import Command
-from bot.command.new_task import NewTaskCommand
+from bot.command.task import TaskCommand
 from bot.command.close_task import CloseTaskCommand
 from bot.command.continue_task import ContinueTaskCommand
 from bot.command.content_task import ContentTaskCommand
@@ -14,7 +14,7 @@ from bot.command.service_task import ServiceTaskCommand
 from bot.command.help_task import HelpTaskCommand
 from bot.command.summary_task import SummaryTaskCommand
 from bot.command.status import StatusCommand
-from bot.command.start_worktime import StartWorktimekCommand
+from bot.command.worktime import WorktimeCommand
 from bot.command.end_worktime import EndWorktimekCommand
 from bot.webhook import Webhook as BotWebhook
 from webexteamssdk import WebexTeamsAPI
@@ -24,7 +24,7 @@ import yaml
 import re
 from model.task_manager import TaskManager
 import time
-from bot.vars.application import CONTEXT_TASK, CONTEXT_NONE
+from bot.vars.application import CONTEXT_TASK, CONTEXT_NONE, CONTEXT_WORKTIME
 
 
 class Application(object):
@@ -60,21 +60,15 @@ class Application(object):
     # INIT FUNCTIONS -------------------------------------------------------- #    
 
     def init_commands(self):
-        self.register_cmd(HelpTaskCommand, CONTEXT_TASK)
-        self.register_cmd(StartWorktimekCommand)
-        self.register_cmd(StartWorktimekCommand, CONTEXT_TASK)
-        self.register_cmd(EndWorktimekCommand)
-        self.register_cmd(EndWorktimekCommand, CONTEXT_TASK)
-        self.register_cmd(NewTaskCommand)
-        self.register_cmd(NewTaskCommand, CONTEXT_TASK)
+        self.register_cmd(WorktimeCommand)
+        self.register_cmd(EndWorktimekCommand, CONTEXT_WORKTIME)
+        self.register_cmd(TaskCommand)
         self.register_cmd(CloseTaskCommand, CONTEXT_TASK)
-        self.register_cmd(ContinueTaskCommand)
+        self.register_cmd(ContinueTaskCommand, CONTEXT_TASK)
         self.register_cmd(ContentTaskCommand, CONTEXT_TASK)
         self.register_cmd(ServiceTaskCommand, CONTEXT_TASK)
         self.register_cmd(SummaryTaskCommand)
-        self.register_cmd(SummaryTaskCommand, CONTEXT_TASK)
         self.register_cmd(StatusCommand)
-        self.register_cmd(StatusCommand, CONTEXT_TASK)
 
     def init_config(self):
         '''

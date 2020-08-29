@@ -30,10 +30,10 @@ class HelpTaskCommand(Command):
         
         used_commands = []
         
-        output = "# I am helping you..."
+        output = "## I am helping you..."
         output+= "\n\n---\n\n"
-        output+= f"*Current Context: {app.current_context}*\n\n"
-        output+= "\n\n---\n\n"
+        # output+= f"*Current Context: {app.current_context}*\n\n"
+        # output+= "\n\n---\n\n"
         output+= "The following commands are available in the current context:\n\n"
         
         for cmd in app.commands[app.current_context]:
@@ -42,8 +42,8 @@ class HelpTaskCommand(Command):
             cmds_string = ", ".join(cmd_obj.get_identifier())
             
             if cmds_string not in used_commands:
-                output+=(f"Commands: **{cmds_string}** \n")
-                output+=(f"* {cmd_obj.get_description()}\n\n")
+                output+=(f"Commands: `{cmds_string}` \n")
+                output+=(f"{cmd_obj.get_description()}\n\n")
                 used_commands.append(cmds_string)
         
         return(output, app.current_context)

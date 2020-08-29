@@ -13,11 +13,12 @@ class SummaryTaskCommand(Command):
 
     @staticmethod
     def get_identifier() -> list:
-        return ['sh sum', 'show sum', 'show summary']
+        return ['summary']
 
     @staticmethod
     def get_description() -> str:
-        return "Shows the summary for day, week or last xx"
+        return "Shows the summary for day, week or last xx" \
+               "***Subcommands:*** [today|week|month|date|project]"
 
     @staticmethod
     def process_message(message, app) -> (str, str):

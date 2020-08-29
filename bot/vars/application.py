@@ -6,3 +6,4 @@ Created on 11 Mar 2020
 
 CONTEXT_NONE = "none"
 CONTEXT_TASK = "task"
+CONTEXT_WORKTIME = "worktime"

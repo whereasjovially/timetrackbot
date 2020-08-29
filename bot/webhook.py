@@ -36,7 +36,7 @@ class Webhook(object):
             resource=self.config['RESOURCE'],
             event=self.config['EVENT']
             )
-        print(f"Created Webhook {webhook.id}")
+        print(f"Created Webhook {webhook.id} on {self.config['TARGET_URL']}")
         return True
         
     

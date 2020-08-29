@@ -81,7 +81,7 @@ class Application(object):
         Loads a environment yaml file to include static configuration variables
         '''
         # To-Do: File Exists and is YML
-        config = yaml.load(open('meta/environment.yml'), Loader=yaml.BaseLoader)
+        config = dict(yaml.load(open('meta/environment.yml'), Loader=yaml.BaseLoader))
 
         print(config)
 

@@ -19,8 +19,8 @@ class TaskCommand(Command):
 
     @staticmethod
     def get_description() -> str:
-        return "This command will handle all of the operations regarding a task<br>" \
-               "***Subcommands:*** [new|edit|close|resume|project|tag]" \
+        return "*This command will handle all of the operations regarding a task*\n\n" \
+               "**Subcommands:** [new|edit|close|resume|project|tag]\n\n" \
                "For more details ask help task"
 
     @staticmethod

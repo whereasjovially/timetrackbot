@@ -17,8 +17,8 @@ class SummaryTaskCommand(Command):
 
     @staticmethod
     def get_description() -> str:
-        return "Shows the summary for day, week or last xx" \
-               "***Subcommands:*** [today|week|month|date|project]"
+        return "*Shows the summary for day, week or last xx*\n\n" \
+               "**Subcommands:** [today|week|month|date|project]"
 
     @staticmethod
     def process_message(message, app) -> (str, str):

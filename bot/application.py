@@ -85,13 +85,13 @@ class Application(object):
 
         # Overwrite config settings by os.environment
         if 'TARGET_URL' in os.environ:
-            self.config['TARGET_URL'] = os.environ['TARGET_URL']
+            config['TARGET_URL'] = os.environ['TARGET_URL']
         if 'BOT_AUTH_TOKEN' in os.environ:
-            self.config['BOT_AUTH_TOKEN'] = os.environ['BOT_AUTH_TOKEN']
+            config['BOT_AUTH_TOKEN'] = os.environ['BOT_AUTH_TOKEN']
         if 'BOT_ID' in os.environ:
-            self.config['BOT_ID'] = os.environ['BOT_ID']
+            config['BOT_ID'] = os.environ['BOT_ID']
         if 'BOT_USERNAME' in os.environ:
-            self.config['BOT_USERNAME'] = os.environ['BOT_USERNAME']
+            config['BOT_USERNAME'] = os.environ['BOT_USERNAME']
 
         return config
 

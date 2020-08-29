@@ -4,6 +4,7 @@ Created on 17 Sep 2019
 @author: jwendling
 '''
 
+import os
 from bot.command import Command
 from bot.command.new_task import NewTaskCommand
 from bot.command.close_task import CloseTaskCommand
@@ -25,6 +26,7 @@ from model.task_manager import TaskManager
 import time
 from bot.vars.application import CONTEXT_TASK, CONTEXT_NONE
 
+
 class Application(object):
     '''
     Init Configuration, Creating WebEx API and so on
@@ -37,17 +39,17 @@ class Application(object):
         
         # Load configvars
         self.config = self.init_config()
-        
+
         # Defining vars
         self.commands = {}
-        self.api = WebexTeamsAPI(self.config['bot_auth_token'])
+        self.api = WebexTeamsAPI(self.config['BOT_AUTH_TOKEN'])
         self.webhook = BotWebhook(self.api, self.config['WEBHOOK_SETTINGS'])
         self.bot = self.api.people.me()
         self.current_context = CONTEXT_NONE
         self.current_task = None
         self.previous_task = None
         self.user = None
-        self.task_manager = TaskManager(self.config['GRAPHQL'])
+        #self.task_manager = TaskManager(self.config['GRAPHQL'])
         self.message_trigger = False
         
         # Preprocessing initial data
@@ -79,7 +81,19 @@ class Application(object):
         Loads a environment yaml file to include static configuration variables
         '''
         # To-Do: File Exists and is YML
-        return yaml.load(open('meta/environment.yml'), Loader=yaml.BaseLoader)
+        config = yaml.load(open('meta/environment.yml'), Loader=yaml.BaseLoader)
+
+        # Overwrite config settings by os.environment
+        if 'TARGET_URL' in os.environ:
+            self.config['TARGET_URL'] = os.environ['TARGET_URL']
+        if 'BOT_AUTH_TOKEN' in os.environ:
+            self.config['BOT_AUTH_TOKEN'] = os.environ['BOT_AUTH_TOKEN']
+        if 'BOT_ID' in os.environ:
+            self.config['BOT_ID'] = os.environ['BOT_ID']
+        if 'BOT_USERNAME' in os.environ:
+            self.config['BOT_USERNAME'] = os.environ['BOT_USERNAME']
+
+        return config
 
 
     # GENERAL FUNCTIONS ----------------------------------------------------- #

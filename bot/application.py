@@ -81,21 +81,17 @@ class Application(object):
         Loads a environment yaml file to include static configuration variables
         '''
         # To-Do: File Exists and is YML
-        config = dict(yaml.load(open('meta/environment.yml'), Loader=yaml.BaseLoader))
-
-        print(config)
+        config = yaml.load(open('meta/environment.yml'), Loader=yaml.BaseLoader)
 
         # Overwrite config settings by os.environment
         if 'TARGET_URL' in os.environ:
-            config['TARGET_URL'] = os.environ['TARGET_URL']
+            config['WEBHOOK_SETTINGS']['TARGET_URL'] = os.environ['TARGET_URL']
         if 'BOT_AUTH_TOKEN' in os.environ:
             config['BOT_AUTH_TOKEN'] = os.environ['BOT_AUTH_TOKEN']
         if 'BOT_ID' in os.environ:
             config['BOT_ID'] = os.environ['BOT_ID']
         if 'BOT_USERNAME' in os.environ:
             config['BOT_USERNAME'] = os.environ['BOT_USERNAME']
-
-        print(config)
 
         return config
 

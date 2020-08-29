@@ -86,6 +86,8 @@ class Application(object):
         # Overwrite config settings by os.environment
 
         print(os.environ)
+        print('TARGET_URL' in os.environ)
+        print(os.environ['TARGET_URL'])
 
         if 'TARGET_URL' in os.environ:
             config['TARGET_URL'] = os.environ['TARGET_URL']

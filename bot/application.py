@@ -7,15 +7,10 @@ Created on 17 Sep 2019
 import os
 from bot.command import Command
 from bot.command.task import TaskCommand
-from bot.command.close_task import CloseTaskCommand
-from bot.command.continue_task import ContinueTaskCommand
-from bot.command.content_task import ContentTaskCommand
-from bot.command.service_task import ServiceTaskCommand
-from bot.command.help_task import HelpTaskCommand
-from bot.command.summary_task import SummaryTaskCommand
+from bot.command.help import HelpCommand
+from bot.command.summary import SummaryCommand
 from bot.command.status import StatusCommand
 from bot.command.worktime import WorktimeCommand
-from bot.command.end_worktime import EndWorktimekCommand
 from bot.webhook import Webhook as BotWebhook
 from webexteamssdk import WebexTeamsAPI
 from webexteamssdk import Webhook
@@ -25,6 +20,9 @@ import re
 from model.task_manager import TaskManager
 import time
 from bot.vars.application import CONTEXT_TASK, CONTEXT_NONE, CONTEXT_WORKTIME
+
+
+MESSAGE_TIMEOUT = 2
 
 
 class Application(object):
@@ -61,13 +59,8 @@ class Application(object):
 
     def init_commands(self):
         self.register_cmd(WorktimeCommand)
-        self.register_cmd(EndWorktimekCommand, CONTEXT_WORKTIME)
         self.register_cmd(TaskCommand)
-        self.register_cmd(CloseTaskCommand, CONTEXT_TASK)
-        self.register_cmd(ContinueTaskCommand, CONTEXT_TASK)
-        self.register_cmd(ContentTaskCommand, CONTEXT_TASK)
-        self.register_cmd(ServiceTaskCommand, CONTEXT_TASK)
-        self.register_cmd(SummaryTaskCommand)
+        self.register_cmd(SummaryCommand)
         self.register_cmd(StatusCommand)
 
     def init_config(self):
@@ -93,7 +86,6 @@ class Application(object):
     # GENERAL FUNCTIONS ----------------------------------------------------- #
     
     def process_webhook(self, json) -> str:
-        
         webhook_obj = Webhook(json)
         message = self.api.messages.get(webhook_obj.data.id)
         person = self.api.people.get(message.personId)
@@ -102,8 +94,8 @@ class Application(object):
         # Loop avoidance!
         if message.personId == self.bot.id:
             # Avoid getting spamed!
-            # Just pause 3 seconds between commands
-            time.sleep(2)
+            # Just pause some seconds between commands
+            time.sleep(MESSAGE_TIMEOUT)
             self.message_trigger = False
             return("Do nothing cause the message was sent by myself!")
 
@@ -117,7 +109,7 @@ class Application(object):
             result = (f"Hi {person.displayName} ({message.personEmail}), you are not authorized using this application!")
         else:
             result = self.process_message(message)
-            time.sleep(2)
+            time.sleep(MESSAGE_TIMEOUT)
             self.message_trigger = False
         # If result is empty then skip response!
         if result is not None and bool(result):
@@ -125,9 +117,8 @@ class Application(object):
         return("OK")
 
     def process_message(self, message):
-
-        print(self.current_context)
-
+        # Note: For now I will keep the context mode to be able to use different contexts in the future
+        # but currently we will only use one context which is the default
         for identifier in self.commands[self.current_context]:
             
             p = re.compile(f"^{identifier.strip()}")

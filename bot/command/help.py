@@ -6,7 +6,7 @@ Created on 18 Sep 2019
 
 from . import Command
 
-class HelpTaskCommand(Command):
+class HelpCommand(Command):
     '''
     Bot Command for creating a new task
     '''

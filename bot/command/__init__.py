@@ -24,3 +24,14 @@ class Command(object):
     def process_message(message) -> str:
         raise Exception("Implement me!")
         return ("None")
+
+
+class Subcommand(object):
+    '''
+    This is the abstract class for all bot subcommands!
+    '''
+
+    @staticmethod
+    def process_message(message) -> str:
+        raise Exception("Implement me!")
+        return ("None")

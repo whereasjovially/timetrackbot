@@ -1,10 +1,10 @@
 '''
-Created on 18 Sep 2019
+Created on 1 Sep 2020
 
 @author: jwendling
 '''
 
-from . import Command
+from bot.command import Subcommand
 from bot.vars.application import CONTEXT_NONE
 import datetime
 
@@ -14,12 +14,8 @@ class CloseTaskCommand(Command):
     '''
 
     @staticmethod
-    def get_identifier() -> list:
-        return ['ct', 'close', 'stop']
-
-    @staticmethod
-    def get_description() -> str:
-        return "Stopping current task!"
+    def get_identifier() -> str:
+        return 'close'
 
     @staticmethod
     def process_message(message, app) -> (str, str):

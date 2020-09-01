@@ -2,17 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4752c77-dfe3-4903-ae79-f6b97bf4596b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bot/command/status/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/summary/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/summary/date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/summary/project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/task/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/task/edit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/task/help.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/task/new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/task/project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/task/resume.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/task/tag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/worktime/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/command/worktime/start.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/help_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/help_task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/summary_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/summary_task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/worktime.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/worktime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/close_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/task/close.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/content_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/continue_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/end_worktime.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/worktime/end.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/help_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/help.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/service_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/status.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/summary_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/command/worktime.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,6 +51,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bot/command/task" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jwe\Documents\workbase\pycharm_workspace\ttrack_bot\bot\command\task" />
+      <recent name="C:\Users\jwe\Documents\workbase\pycharm_workspace\ttrack_bot\bot\command\worktime" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jwe\Documents\workbase\pycharm_workspace\ttrack_bot\bot\command\task" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -35,5 +72,22 @@
       <updated>1598986104555</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598991414238">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1598991414238" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bot/application.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

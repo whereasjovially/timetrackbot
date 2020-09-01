@@ -19,9 +19,7 @@ class WorktimeCommand(Command):
 
     @staticmethod
     def get_description() -> str:
-        return "*Starting and ending the worktime which tracks the actual working hours. This does not influence the tasks.*\n\n" \
-               "**Subcommands:** [start|end]\n\n" \
-               "For more details ask help worktime"
+        return "`[start|end]` \t*Starting and ending the worktime which tracks the actual working hours.*\n\n"
 
     @staticmethod
     def process_message(message, app) -> (str, str):

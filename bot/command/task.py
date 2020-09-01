@@ -19,9 +19,7 @@ class TaskCommand(Command):
 
     @staticmethod
     def get_description() -> str:
-        return "*This command will handle all of the operations regarding a task*\n\n" \
-               "**Subcommands:** [new|edit|close|resume|project|tag]\n\n" \
-               "For more details ask help task"
+        return "`[new|edit|close|resume|project|tag]` \t*This command will handle all of the operations regarding a task*\n\n"
 
     @staticmethod
     def process_message(message, app) -> (str, str):

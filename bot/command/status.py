@@ -17,7 +17,7 @@ class StatusCommand(Command):
 
     @staticmethod
     def get_description() -> str:
-        return "Show status displays current task, working hours track"
+        return "`[?id]` *Show status displays current task, working hours track*"
 
     @staticmethod
     def process_message(message, app) -> (str, str):

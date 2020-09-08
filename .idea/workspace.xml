@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4752c77-dfe3-4903-ae79-f6b97bf4596b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bot/command/status/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/summary/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/summary/date.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/summary/project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/task/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/task/edit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/task/help.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/task/new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/task/project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/task/resume.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/task/tag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/worktime/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/command/worktime/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/clockifyAPI/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/close_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/task/close.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/content_task.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/continue_task.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/end_worktime.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/worktime/end.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/help_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/command/help.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/service_task.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/summary_task.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/task.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/command/worktime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/clockify_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/clockifyAPI/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

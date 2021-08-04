@@ -74,7 +74,7 @@ if __name__ == '__main__':
     curl -H "content-type: application/json" -H "X-Api-Key: yourAPIkey" -X GET https://api.clockify.me/api/v1/user
     '''
 
-    api_key = "X0Oqqn0mRCv1RdB2"
+    api_key = "xxxxxxxxx"
 
     api = ClockifyAPI(api_key)
 
